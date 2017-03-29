@@ -28,7 +28,7 @@ This uses Docker to run a containerized Yggdrasil app.  For subsequent dev workf
 1. `source pyenv/bin/activate`
 1. `cd yggdrasil`
 1. put the settings.py and settings.pyc file you got from an admin into /server/conf folder - this file contains sensitive config data that is not checked into source control.
-1. In /yggdrasil directory, `cd server && mkdir logs && touch server.log portal.log http_requests.log`
+1. In /yggdrasil directory, `cd server && mkdir logs && touch logs/server.log logs/portal.log logs/http_requests.log`
 1. `evennia migrate`
 1. In /yggdrasil directory, `docker run -it -p 8000-8001:8000-8001 -p 4000:4000 -v ${PWD}:/usr/src/game lorecrafting/yggdrasil`
 1. Yggdrasil webapp server should be running at localhost:8000 with 4000 as telnet port
