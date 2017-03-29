@@ -7,7 +7,7 @@ You only need to do this once for setting up.
 1. Make sure Python 2.7+ (3.0 not supported yet) is installed by running `python --version` in terminal.
 1. Make sure Pip is installed by running `pip --version` in terminal.
 1. Make sure yggdrasil_dev.sh, server.py and server.pyc are copied into the directory.
-1. `./yggdrasil_dev.sh`
+1. run `./yggdrasil_dev.sh` in your project folder.
 1. Yggdrasil webapp server should be running at localhost:8000 with 4000 as telnet port.
 1. Start developing in the /yggdrasil game folder.
 
@@ -50,7 +50,7 @@ This uses Docker to run a containerized Yggdrasil app.  For subsequent dev workf
 1. `docker exec <container_id> git pull origin master`
 1. To tail Yggdrasil logs `docker logs -f <container_id>
 
-## Todo:
+### Todo:
 * Move adding remote repository info, keys and secrets to Yggdrasil's Dockerfile using env variables
 * Need to find a better flow for incorporate Evennia library upstream changes - currently its just rebuilding the container and manually redeploying
 * Find a way to provide DB data integrity between prod dev and new dev environments - New super user needs to be set up in the DB after every new dev install
