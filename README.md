@@ -50,6 +50,9 @@ This uses Docker to run a containerized Yggdrasil app.  For subsequent dev workf
 1. `docker exec <container_id> git pull origin master`
 1. To tail Yggdrasil logs `docker logs -f <container_id>
 
+With rkt & systemd:
+`systemd-run --slice=machine rkt run --insecure-options=image --port=8000-tcp:8000 --port=8001-tcp:8001 --port=4000-tcp:4000 docker://lorecrafting/yggdrasil`
+
 ### Todo:
 * Move adding remote repository info, keys and secrets to Yggdrasil's Dockerfile using env variables
 * Need to find a better flow for incorporate Evennia library upstream changes - currently its just rebuilding the container and manually redeploying
